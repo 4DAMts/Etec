@@ -1,0 +1,115 @@
+<html>
+<head>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body>
+<div class="navigation">
+
+  <div class="navigation-center">
+    <img src="images/logo.png" alt="">
+  </div>
+  <div class="navigation-right">
+   <a href="#"><img src="images/shopping-bag.png" alt=""></a>
+    <button class="login-btn" href="#"><a href="Contato.html" style="text-decoration:none">contato</a></button>
+    <a href="#"><img src="images/shopping-bag.png" alt=""></a>
+    <button class="login-btn" href="#"><a href="Cadastro.html" style="text-decoration:none">Cadastro</a></button>
+  </div>
+</div>
+ 
+<!-- Slider Wrapper -->
+<div class="css-slider-wrapper">
+  <input type="radio" name="slider" class="slide-radio1" checked id="slider_1">
+  <input type="radio" name="slider" class="slide-radio2" id="slider_2">
+  <input type="radio" name="slider" class="slide-radio3" id="slider_3">
+  <input type="radio" name="slider" class="slide-radio4" id="slider_4">
+ 
+  <div class="slider-pagination">
+    <label for="slider_1" class="page1"></label>
+    <label for="slider_2" class="page2"></label>
+    <label for="slider_3" class="page3"></label>
+    <label for="slider_4" class="page4"></label>
+  </div>
+
+  <div class="slider slide-1">
+    <div class="slider-content">
+      <h1>Bem Vindo</h1>
+      <h2>Estude sobre seus animais preferidos (menos sua mãe aquela galinha)</h2> <br> <br> <br>
+      <button type="button" class="buy-now-btn" name="button"><a href="Home2.html" style="text-decoration:none">Iniciar</a></button>
+    </div>
+    <div class="number-pagination">
+      <span>1</span>
+    </div>
+  </div>
+ 
+  <div class="slider slide-2">
+    <div class="slider-content">
+       <h1>Encontre de Tudo</h1>
+      <h2>(menos porno)</h2> <br> <br> <br>
+      <button type="button" class="buy-now-btn" name="button"> <a href="Home2.html"  style="text-decoration:none">Iniciar</a></button>
+    </div>
+    <div class="number-pagination">
+      <span>2</span>
+    </div>
+  </div>
+ 
+  <div class="slider slide-3">
+
+    <div class="slider-content">
+       <h1>Você Manda</h1>
+      <h2>Mande sugestões construtivas para nós.</h2> <br> <br> <br>
+      <button type="button" class="buy-now-btn" name="button"><a href="Home2.html" style="text-decoration:none">Iniciar</a></button>
+    </div>
+    <div class="number-pagination">
+      <span>3</span>
+    </div>
+  </div>
+ 
+  <div class="slider slide-4">
+    <div class="slider-content">
+       <h1>Pegue uma corda</h1>
+      <h2>Amarre no pescoço e só vai.</h2> <br> <br> <br>
+      <button type="button" class="buy-now-btn" name="button"><a href="Home2.html" style="text-decoration:none">Iniciar</a></button>
+    </div>
+    <div class="number-pagination">
+      <span>4</span>
+    </div>
+  </div>
+</div>
+
+<script>
+var TIMEOUT = 6000;
+ 
+var interval = setInterval(handleNext, TIMEOUT);
+ 
+function handleNext() {
+ 
+  var $radios = $('input[class*=&quot;slide-radio&quot;]');
+  var $activeRadio = $('input[class*=&quot;slide-radio&quot;]:checked');
+ 
+  var currentIndex = $activeRadio.index();
+  var radiosLength = $radios.length;
+ 
+  $radios
+    .attr('checked', false);
+ 
+  if (currentIndex &gt;= radiosLength - 1) {
+ 
+    $radios
+      .first()
+      .attr('checked', true);
+ 
+  } else {
+ 
+    $activeRadio
+      .next('input[class*=&quot;slide-radio&quot;]')
+      .attr('checked', true);
+ 
+  }
+ 
+}
+</script>
+
+</html>
